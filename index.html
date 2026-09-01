@@ -14,9 +14,10 @@
       --bg:       #07090c;
       --bg-soft:  #0b0f18;
       --border:   #141e2c;
-      --txt:      #d8e7f4;   /* was #bfcfe3 */
-      --txt-2:    #5b7b92;   /* was #415a72 */
-      --txt-3:    #1c2e40;
+      /* lightened main text and secondary text */
+      --txt:      #e6f3fb;   /* was #d8e7f4 */
+      --txt-2:    #7ea0b8;   /* was #5b7b92 */
+      --txt-3:    #2b4a62;   /* was #1c2e40 */
       --blue:     #2478cc;
       --blue-dim: #0c3260;
       --blue-b:   #4a9ee8;
@@ -72,9 +73,9 @@
 
     .nav-links a {
       font-family: var(--mono);
-      font-size: 0.82rem;
-      font-weight: 400;
-      letter-spacing: 0.1em;
+      font-size: 0.9rem;    /* increased for clearer size */
+      font-weight: 500;    /* slightly bolder for readability */
+      letter-spacing: 0.08em;
       color: var(--txt-2);
       text-decoration: none;
       transition: color 0.15s;
@@ -172,10 +173,10 @@
 
     .section-label {
       font-family: var(--mono);
-      font-size: 0.62rem;
-      font-weight: 300;
+      font-size: 0.72rem; /* increased so section labels read as headers */
+      font-weight: 500;
       letter-spacing: 0.22em;
-      color: var(--txt-3);
+      color: var(--txt-2); /* lightened header label color */
       margin-bottom: 2rem;
     }
 
@@ -370,6 +371,9 @@
       .tool-item-link { display: none; }
       footer { padding: 1.5rem; flex-direction: column; align-items: flex-start; }
       .writing-line { flex-direction: column; gap: 1rem; }
+      /* ensure nav links remain legible on small screens */
+      .nav-links a { font-size: 0.86rem; }
+      .section-label { font-size: 0.68rem; }
     }
   </style>
 </head>
@@ -457,7 +461,7 @@
 
       <a href="https://github.com/flintek-llc/observer" class="tool-item" target="_blank" rel="noopener">
         <span class="tool-item-name">OBSERVER</span>
-        <span class="tool-item-desc">Observable enrichment for defenders and incident responders. Accepts an IP, domain, URL, or file hash and fans it out to seven threat intelligence sources simultaneously, returning normalized results. Ships as a CLI binary and a self-hosted web server with browser UI.</span>
+        <span class="tool-item-desc">Observable enrichment for defenders and incident responders. Accepts an IP, domain, URL, or file hash and fans it out to seven threat intelligence sources simultan[...]
         <span class="tool-item-link">github.com/flintek-llc/observer →</span>
       </a>
 
